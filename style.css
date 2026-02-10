@@ -188,6 +188,16 @@ h2 {
   max-width: 60ch;
 }
 
+.now-list {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.now-list li + li {
+  margin-top: 7px;
+}
+
 .card-grid {
   margin-top: 15px;
   display: grid;
@@ -226,6 +236,24 @@ h2 {
   font-size: 0.85rem;
 }
 
+.chip-list {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.86rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
 .footer {
   margin: 22px auto 34px;
   padding-bottom: 18px;
@@ -234,6 +262,11 @@ h2 {
 
 .footer p {
   margin: 0;
+}
+
+.contact-topics {
+  margin: 8px 0 12px;
+  color: var(--muted);
 }
 
 .footer a {
