@@ -3,22 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Homepage</title>
+  <title>모드의 홈페이지</title>
+  <meta name="description" content="개발 학습과 프로젝트를 정리한 개인 홈페이지입니다." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1>안녕하세요, 제 홈페이지입니다.</h1>
-    <p>GitHub Pages로 배포한 첫 번째 사이트</p>
-    <a class="btn" href="https://github.com" target="_blank" rel="noreferrer">GitHub 바로가기</a>
+  <div class="bg-shape shape-1" aria-hidden="true"></div>
+  <div class="bg-shape shape-2" aria-hidden="true"></div>
+
+  <header class="topbar container">
+    <a class="brand" href="#">mod41529</a>
+    <nav class="nav">
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section>
+  <main>
+    <section class="hero container reveal">
+      <p class="eyebrow">GitHub Pages Personal Site</p>
+      <h1>기록하고, 만들고, 개선하는<br />개발자 페이지</h1>
+      <p class="hero-copy">작게 만들고 빠르게 배포하면서 점진적으로 품질을 올리는 개발 방식을 지향합니다.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/mod41529" target="_blank" rel="noreferrer">GitHub 보기</a>
+        <a class="btn btn-ghost" href="#projects">프로젝트 보기</a>
+      </div>
+    </section>
+
+    <section id="about" class="container section reveal">
       <h2>소개</h2>
-      <p>여기에 자기소개와 프로젝트를 추가해보세요.</p>
+      <p>안녕하세요. 실전 위주로 웹 개발을 학습하고 있으며, 간단한 아이디어를 빠르게 제품 형태로 구현하는 것을 좋아합니다.</p>
+      <ul class="facts">
+        <li>관심 분야: 프론트엔드, 자동화, AI 활용 워크플로우</li>
+        <li>작업 스타일: 작은 단위 배포 + 반복 개선</li>
+        <li>현재 목표: 재사용 가능한 개인 프로젝트 템플릿 구축</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="container section reveal">
+      <h2>프로젝트</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Homepage Project</h3>
+          <p>GitHub Pages 기반의 개인 소개 사이트. 반응형 UI와 섹션 구조를 지속 개선 중입니다.</p>
+          <a href="https://mod41529.github.io/homepage-project/" target="_blank" rel="noreferrer">Live Site</a>
+        </article>
+        <article class="card">
+          <h3>Notion Capture Flow</h3>
+          <p>로컬 파일을 정리해 Notion 페이지와 데이터베이스에 반영하는 개인 지식화 워크플로우입니다.</p>
+          <a href="https://github.com/mod41529" target="_blank" rel="noreferrer">Repository</a>
+        </article>
+        <article class="card">
+          <h3>Sora Test Automation</h3>
+          <p>생성형 영상 테스트를 스크립트 기반으로 반복 실행하고 결과물을 관리하는 실험 프로젝트입니다.</p>
+          <a href="https://github.com/mod41529" target="_blank" rel="noreferrer">Repository</a>
+        </article>
+      </div>
     </section>
   </main>
+
+  <footer id="contact" class="container footer reveal">
+    <h2>연락</h2>
+    <p>협업이나 아이디어 공유는 아래 링크로 연락 주세요.</p>
+    <p><a href="https://github.com/mod41529" target="_blank" rel="noreferrer">@mod41529</a></p>
+    <small>© <span id="year"></span> mod41529</small>
+  </footer>
 
   <script src="script.js"></script>
 </body>
