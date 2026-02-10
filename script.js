@@ -17,3 +17,17 @@ const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+const videoEl = document.getElementById("hero-video");
+if (videoEl) {
+  videoEl.addEventListener("error", () => {
+    document.body.classList.add("video-fallback");
+  });
+
+  const playPromise = videoEl.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      document.body.classList.add("video-fallback");
+    });
+  }
+}
