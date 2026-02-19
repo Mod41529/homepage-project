@@ -208,7 +208,7 @@ function resizeCanvas(ctx, canvas, particles) {
   canvas.style.height = `${height}px`;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-  const targetCount = Math.min(160, Math.max(38, Math.round((width * height) / (compactMode ? 13000 : 9500)));
+  const targetCount = Math.min(160, Math.max(38, Math.round((width * height) / (compactMode ? 13000 : 9500))));
   while (particles.length < targetCount) {
     particles.push(createParticle());
   }
