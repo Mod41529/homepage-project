@@ -1,9 +1,13 @@
 const shouldReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealItems = document.querySelectorAll(".reveal");
 
-if (shouldReduceMotion) {
+function revealAllImmediately() {
   revealItems.forEach((item) => item.classList.add("visible"));
-} else {
+}
+
+if (shouldReduceMotion) {
+  revealAllImmediately();
+} else if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -17,6 +21,9 @@ if (shouldReduceMotion) {
   );
 
   revealItems.forEach((item) => observer.observe(item));
+  setTimeout(revealAllImmediately, 500);
+} else {
+  revealAllImmediately();
 }
 
 const yearEl = document.getElementById("year");
